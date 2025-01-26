@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swiggy Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f7f7f7;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        input, textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #fc8019;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e57300;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Order Your Food</h1>
+
+<form action="/submit_order" method="POST">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+    <label for="address">Delivery Address:</label>
+    <textarea id="address" name="address" placeholder="Enter your full address" rows="4" required></textarea>
+
+    <label for="food">Select Food Item:</label>
+    <select id="food" name="food" required>
+        <option value="">--Choose an item--</option>
+        <option value="pizza">Pizza</option>
+        <option value="burger">Burger</option>
+        <option value="pasta">Pasta</option>
+        <option value="biryani">Biryani</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" required>
+
+    <label for="notes">Special Instructions:</label>
+    <textarea id="notes" name="notes" placeholder="Add any special requests (optional)" rows="3"></textarea>
+        <button>
+              <a href="mainmenu.html">Order Now</a></button>
+            <button>
+</form>
+
+</body>
+</html>
